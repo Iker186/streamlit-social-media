@@ -5,7 +5,7 @@ import os
 
 spark = SparkSession.builder.appName("SocialMediaProcessing").getOrCreate()
 
-df = spark.read.csv("./data/social_media.csv", header=True, inferSchema=True)
+df = spark.read.csv("./data/socialmedia.csv", header=True, inferSchema=True)
 
 df = df.dropna()
 

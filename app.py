@@ -37,13 +37,13 @@ col1, col2 = st.columns(2)
 
 with col1:
     github_user  = st.text_input('👤 Github user', value='Iker186')
-    github_repo  = st.text_input('📦 Github repo', value='social-media-project')
+    github_repo  = st.text_input('📦 Github repo', value='streamlit-social-media')
     spark_job    = st.text_input('🧪 Spark job', value='spark')
 
 with col2:
     github_token = st.text_input('🔑 Github token', value='', type="password")  
-    code_url     = st.text_input('🧾 Code URL', value='https://raw.githubusercontent.com/Iker186/social-media-project/main/spark_process.py')
-    dataset_url  = st.text_input('📊 Dataset URL', value='https://raw.githubusercontent.com/Iker186/social-media-project/main/data/social_media.csv')
+    code_url     = st.text_input('🧾 Code URL', value='https://raw.githubusercontent.com/Iker186/streamlit-social-media/main/spark_process.py')
+    dataset_url  = st.text_input('📊 Dataset URL', value='https://raw.githubusercontent.com/Iker186/streamlitsocial-media/main/data/socialmedia.csv')
 
 if st.button("▶️ POST spark submit"):
    post_spark_job(github_user, github_repo, spark_job, github_token, code_url, dataset_url)
